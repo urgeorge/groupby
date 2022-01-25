@@ -1,7 +1,7 @@
 /* tslint:disable: ordered-imports*/
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SBRouteData } from '@modules/navigation/models';
+import { SBRouteData } from '../../modules/navigation/models';
 
 /* Module */
 import { ErrorModule } from './error.module';

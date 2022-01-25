@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {RouterModule} from "@angular/router";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule, HTTP_INTERCEPTORS} from "@angular/common/http";
 import {NavigationModule} from "../modules/navigation/navigation.module";
-import {AppCommonModule} from "../modules/app-common/app-common.module";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -13,10 +13,11 @@ import {AppCommonModule} from "../modules/app-common/app-common.module";
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    AppCommonModule,
-    NavigationModule,
+    NavigationModule.forRoot(),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 /* Modules */
-import { AppCommonModule } from '@common/app-common.module';
 
 /* Components */
 import * as navigationComponents from './components';
@@ -20,9 +19,11 @@ import * as navigationGuards from './guards';
 
 /* Services */
 import * as navigationServices from './services';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+
 
 @NgModule({
-    imports: [CommonModule, RouterModule, AppCommonModule],
+  imports: [CommonModule, RouterModule, NgbModule],
     declarations: [
         ...navigationContainers.containers,
         ...navigationComponents.components,

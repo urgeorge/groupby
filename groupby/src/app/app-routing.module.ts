@@ -6,28 +6,24 @@ const routes: Routes = [
     {
         path: '',
         loadChildren: () =>
-            import('modules/blog/blog-routing.module').then(m => m.BlogRoutingModule),
+            import('../modules/blog/blog-routing.module').then(m => m.BlogRoutingModule),
     },
-    {
-        path: 'auth',
-        loadChildren: () =>
-            import('modules/auth/auth-routing.module').then(m => m.AuthRoutingModule),
-    },
+
     {
         path: 'error',
         loadChildren: () =>
-            import('modules/error/error-routing.module').then(m => m.ErrorRoutingModule),
+            import('../modules/error/error-routing.module').then(m => m.ErrorRoutingModule),
     },
     {
         path: '**',
         pathMatch: 'full',
         loadChildren: () =>
-            import('modules/error/error-routing.module').then(m => m.ErrorRoutingModule),
+            import('../modules/error/error-routing.module').then(m => m.ErrorRoutingModule),
     },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
 })
 export class AppRoutingModule {}

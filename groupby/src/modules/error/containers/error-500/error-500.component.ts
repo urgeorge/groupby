@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
     selector: 'sb-error-500',
     changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: './error-500.component.html',
-    styleUrls: ['error-500.component.scss'],
+    styleUrls: ['error-500.component.css'],
 })
 export class Error500Component implements OnInit {
     constructor() {}

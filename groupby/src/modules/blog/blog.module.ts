@@ -4,12 +4,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import { MarkdownModule } from 'ngx-markdown';
-import { AutosizeModule } from 'ngx-autosize';
-
 /* Modules */
-import { AppCommonModule } from '@common/app-common.module';
-import { NavigationModule } from '@modules/navigation/navigation.module';
+import {NavigationModule} from "../navigation/navigation.module";
 
 /* Components */
 import * as blogComponents from './components';
@@ -29,9 +25,6 @@ import * as blogServices from './services';
         RouterModule,
         ReactiveFormsModule,
         FormsModule,
-        MarkdownModule.forChild(),
-        AutosizeModule,
-        AppCommonModule,
         NavigationModule,
     ],
     providers: [...blogServices.services, ...blogGuards.guards],

@@ -1,22 +1,23 @@
 import { TestBed } from '@angular/core/testing';
-import { AuthGuard } from '@modules/auth/guards';
 
-describe('Blog Module Guards', () => {
-    let authGuard: AuthGuard;
+import { PostGuard } from './blog.guard';
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            imports: [],
-            providers: [AuthGuard],
-        });
-        authGuard = TestBed.inject(AuthGuard);
+describe('Error Guards', () => {
+  let postGuard: PostGuard;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [],
+      providers: [PostGuard],
     });
+    postGuard = TestBed.inject(PostGuard);
+  });
 
-    describe('canActivate', () => {
-        it('should return an Observable<boolean>', () => {
-            authGuard.canActivate().subscribe(response => {
-                expect(response).toEqual(true);
-            });
-        });
+  describe('canActivate', () => {
+    it('should return an Observable<boolean>', () => {
+      postGuard.canActivate().subscribe(response => {
+        expect(response).toEqual(true);
+      });
     });
+  });
 });

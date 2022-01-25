@@ -5,8 +5,8 @@
             <i class="fa fa-2x fa-bars"></i>
         </button>
 
-        <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
-            <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto" [ngbCollapse]="isMenuCollapsed">
                 <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="/about">New features</a></li>
                 <li class="nav-item"><a class="btn btn-primary" routerLink="/auth/login">Login</a></li>
