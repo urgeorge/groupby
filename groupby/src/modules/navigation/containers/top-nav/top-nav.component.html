@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/">GroupBy</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" (click)="isMenuCollapsed = !isMenuCollapsed" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-2x fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/about">New features</a></li>
+                <li class="nav-item"><a class="btn btn-primary" routerLink="/auth/login">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
