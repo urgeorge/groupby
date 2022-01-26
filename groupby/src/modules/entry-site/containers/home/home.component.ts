@@ -28,8 +28,18 @@ export class HomeComponent implements OnInit, OnDestroy {
     faCalendar = faCalendarAlt;
     faGender = faVenusMars;
 
+
+  cars = [
+    { id: 1, name: 'Volvo' },
+    { id: 2, name: 'Saab' },
+    { id: 3, name: 'Opel' },
+    { id: 4, name: 'Audi' },
+  ];
+  selectedCar: any;
+
     constructor(
         private changeDetectorRef: ChangeDetectorRef,
+
     ) {
     }
     ngOnInit() {

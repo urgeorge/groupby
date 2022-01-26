@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
+import { NgSelectModule } from '@ng-select/ng-select';
 /* Modules */
 import {NavigationModule} from "../navigation/navigation.module";
 
@@ -20,6 +20,7 @@ import * as entrySiteGuards from './guards';
 import * as entrySiteServices from './services';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -28,6 +29,7 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
     FormsModule,
     NavigationModule,
     FontAwesomeModule,
+    NgSelectModule,
   ],
     providers: [...entrySiteServices.services, ...entrySiteGuards.guards],
     declarations: [...entrySiteContainers.containers, ...entrySiteComponents.components],

@@ -163,6 +163,7 @@ form {
 }
 
 
+
 .form-content .login-form,
 .forms .form-content .input-boxes{
   margin-top: 30px;
@@ -187,21 +188,32 @@ form {
   border-bottom: 2px solid rgba(0,0,0,0.2);
   transition: all 0.3s ease;
 }
+.form-content .input-box select{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
 
 
 .form-content .input-box input:focus,
 .form-content .input-box input:valid{
-  border-color: #7d2ae8;
+  border-color: var(--main-color);
 }
 .form-content .input-box i{
   position: absolute;
-  color: #7d2ae8;
+  color: var(--main-color);
   font-size: 17px;
 }
 
 .form-content .input-box fa-icon{
   position: absolute;
-  color: #7d2ae8;
+  color: var(--main-color);
   font-size: 17px;
 }
 
@@ -223,20 +235,20 @@ form {
 
 .forms .form-content .button input{
   color: #fff;
-  background: #7d2ae8;
+  background: var(--main-color);
   border-radius: 6px;
   padding: 0;
   cursor: pointer;
   transition: all 0.4s ease;
 }
 .forms .form-content .button input:hover{
-  background: #5b13b9;
+  background: #FB9689;
 }
 .forms .form-content .button input:active{
   transform: scale(0.95);
 }
 .forms .form-content label{
-  color: #5b13b9;
+  color: #FB9689;
   cursor: pointer;
 }
 .forms .form-content label:hover{
@@ -252,7 +264,7 @@ form {
 /*-------------------------------*/
 button{
   color: #fff;
-  background: #7d2ae8;
+  background: var(--main-color);
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -281,8 +293,8 @@ button.ghost {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 2px;
-  margin-left: 30px;
-  margin-top: 15px;
+  margin-left: 50px;
+  margin-top: 25px;
 }
 
 sb-footer {
