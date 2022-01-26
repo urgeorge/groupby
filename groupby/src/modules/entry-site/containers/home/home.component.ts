@@ -8,6 +8,9 @@ import {
 
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {faLock} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import {faCalendarAlt} from "@fortawesome/free-solid-svg-icons";
+import {faVenusMars} from "@fortawesome/free-solid-svg-icons";
 
 const container = document.getElementById('container');
 
@@ -21,6 +24,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     faUsername = faUser;
     faPassword = faLock;
+    faMail = faEnvelope;
+    faCalendar = faCalendarAlt;
+    faGender = faVenusMars;
 
     constructor(
         private changeDetectorRef: ChangeDetectorRef,
