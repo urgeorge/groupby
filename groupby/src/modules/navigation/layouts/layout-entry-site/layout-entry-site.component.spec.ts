@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CleanBlogHeaderComponent } from './clean-blog-header.component';
+import { LayoutEntrySiteComponent } from './layout-entry-site.component';
 
-describe('CleanBlogHeaderComponent', () => {
-  let component: CleanBlogHeaderComponent;
-  let fixture: ComponentFixture<CleanBlogHeaderComponent>;
+describe('LayoutEntrySite', () => {
+  let component: LayoutEntrySiteComponent;
+  let fixture: ComponentFixture<LayoutEntrySiteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CleanBlogHeaderComponent ]
+      declarations: [ LayoutEntrySiteComponent ]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CleanBlogHeaderComponent);
+    fixture = TestBed.createComponent(LayoutEntrySiteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

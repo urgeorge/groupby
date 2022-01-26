@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LayoutBlogComponent } from './layout-blog.component';
+import { AuthBoxComponent } from './auth-box.component';
 
-describe('LayoutBlogComponent', () => {
-  let component: LayoutBlogComponent;
-  let fixture: ComponentFixture<LayoutBlogComponent>;
+describe('AuthBoxComponent', () => {
+  let component: AuthBoxComponent;
+  let fixture: ComponentFixture<AuthBoxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LayoutBlogComponent ]
+      declarations: [ AuthBoxComponent ]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LayoutBlogComponent);
+    fixture = TestBed.createComponent(AuthBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

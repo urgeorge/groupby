@@ -6,7 +6,7 @@ const routes: Routes = [
     {
         path: '',
         loadChildren: () =>
-            import('../modules/blog/blog-routing.module').then(m => m.BlogRoutingModule),
+            import('../modules/entry-site/entry-site-routing.module').then(m => m.EntrySiteRoutingModule),
     },
 
     {

@@ -2,12 +2,12 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 
 @Component({
-    selector: 'sb-clean-blog-header',
+    selector: 'auth-box',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    templateUrl: './clean-blog-header.component.html',
-    styleUrls: ['clean-blog-header.component.css'],
+    templateUrl: './auth-box.component.html',
+    styleUrls: ['auth-box.component.css'],
 })
-export class CleanBlogHeaderComponent implements OnInit {
+export class AuthBoxComponent implements OnInit {
     @Input() backgroundImage!: string;
     @Input() heading!: string;
     @Input() subHeading!: string;

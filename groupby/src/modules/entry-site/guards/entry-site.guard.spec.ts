@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PostGuard } from './blog.guard';
+import { PostGuard } from './entry-site.guard';
 
 describe('Error Guards', () => {
   let postGuard: PostGuard;

@@ -1,0 +1,83 @@
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+    <a class="navbar-brand" href="#">GroupBy</a>
+
+</nav>
+
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+
+    <form action="#">
+      <div class="forms">
+        <div class="form-content">
+          <div class="signup-form">
+            <h1>Create Account</h1>
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="form-container sign-in-container">
+    <form action="#">
+
+      <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <h1>Sign in</h1>
+            <div class="input-boxes">
+              <div class="input-box">
+                <fa-icon [icon]="faUsername"></fa-icon>
+                <input type="text" placeholder="Username" required>
+              </div>
+              <div class="input-box">
+                <fa-icon [icon]="faPassword"></fa-icon>
+                <input type="password" placeholder="Password" required>
+              </div>
+              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Login">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>If you already have an account in our website you can sign into your account</p>
+        <button class="ghost" id="signIn" (click)="goRight()">Sign in</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Welcome!</h1>
+        <p>If you don't have an account, register and visit your favorite groups</p>
+        <button class="ghost" id="signUp" (click)="goLeft()">Get started</button>
+      </div>
+    </div>
+  </div>
+</div>
+<sb-footer></sb-footer>
+
+
+
