@@ -1,5 +1,8 @@
 package com.groupby.groupbybackend.models;
 
+import com.groupby.groupbybackend.models.role.Role;
+import lombok.Getter;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,11 +12,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(	name = "users",
-        uniqueConstraints = {
-                @UniqueConstraint(columnNames = "username"),
-                @UniqueConstraint(columnNames = "email")
-        })
+@Table(name = "users")
 
 public class User {
     @Id

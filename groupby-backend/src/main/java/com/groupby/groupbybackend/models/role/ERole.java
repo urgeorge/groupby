@@ -1,4 +1,4 @@
-package com.groupby.groupbybackend.models;
+package com.groupby.groupbybackend.models.role;
 
 public enum ERole {
     ROLE_USER,
