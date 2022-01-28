@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EntrySiteGuard } from './entry-site.guard';
+import { HomeGuard } from './home.guard';
 
-describe('EntrySiteGuard', () => {
-  let guard: EntrySiteGuard;
+describe('HomeGuard', () => {
+  let guard: HomeGuard;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    guard = TestBed.inject(EntrySiteGuard);
+    guard = TestBed.inject(HomeGuard);
   });
 
   it('should be created', () => {

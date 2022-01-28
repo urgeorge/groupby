@@ -15,6 +15,11 @@ const routes: Routes = [
             import('../modules/error/error-routing.module').then(m => m.ErrorRoutingModule),
     },
     {
+        path: 'home',
+        loadChildren: () =>
+          import('../modules/home/home-routing.module').then(m => m.HomeRoutingModule),
+    },
+    {
         path: '**',
         pathMatch: 'full',
         loadChildren: () =>

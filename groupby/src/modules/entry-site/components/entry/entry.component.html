@@ -1,0 +1,97 @@
+<top-nav></top-nav>
+
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+
+    <form>
+      <div class="forms">
+        <div class="form-content">
+          <div class="signup-form">
+            <h1>Create Account</h1>
+            <div class="input-boxes">
+              <div class="input-box">
+                <fa-icon [icon]="faUsername"></fa-icon>
+                <input type="text" placeholder="Enter your firstname" style="margin-right: 15px" required>
+                <fa-icon [icon]="faUsername" style="position: relative; left: 15px"></fa-icon>
+                <input type="text" placeholder="Enter your surname" required>
+              </div>
+              <div class="input-box">
+                <fa-icon [icon]="faMail"></fa-icon>
+                <input type="email" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <fa-icon [icon]="faPassword"></fa-icon>
+                <input type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="input-box">
+                <fa-icon [icon]="faCalendar"></fa-icon>
+                <input type="date" placeholder="Enter your date of birth" required>
+              </div>
+              <div class="input-box">
+                <fa-icon [icon]="faGender"></fa-icon>
+                <select id="gender-select">
+                  <option value="nothing">Please choose an option</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Sign up">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="form-container sign-in-container">
+    <form *ngIf="!isLoggedIn"
+          name="formLogin"
+          (ngSubmit)="onSubmit()"
+          novalidate>
+
+      <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <h1>Sign in</h1>
+            <div class="input-boxes">
+              <div class="input-box">
+                <fa-icon [icon]="faUsername"></fa-icon>
+                <input type="text" placeholder="Username" [(ngModel)]="formLogin.username" name="username"required>
+              </div>
+              <div class="input-box">
+                <fa-icon [icon]="faPassword"></fa-icon>
+                <input type="password" placeholder="Password" [(ngModel)]="formLogin.password" name="password" required>
+              </div>
+              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Login">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>If you already have an account in our website you can sign into your account</p>
+        <button class="ghost" id="signIn" (click)="goRight()">Sign in</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Welcome!</h1>
+        <p>If you don't have an account, register and visit your favorite groups</p>
+        <button class="ghost" id="signUp" (click)="goLeft()">Get started</button>
+      </div>
+    </div>
+  </div>
+</div>
+<sb-footer></sb-footer>
+
+
+
