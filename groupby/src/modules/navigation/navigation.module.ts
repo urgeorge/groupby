@@ -1,9 +1,7 @@
-/* tslint:disable: ordered-imports*/
+
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
-/* Modules */
 
 /* Components */
 import * as navigationComponents from './components';

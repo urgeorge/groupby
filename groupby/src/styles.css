@@ -2,6 +2,8 @@
 
 html{
   --main-color: #F96F5D;
+  --sidenav-color: #323232;
+  --second-sidenav-color: #464646;
   height: 100%;
 }
 body{
