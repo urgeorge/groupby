@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 /* Module */
 import { EntrySiteModule } from './entry-site.module';
 
-/* Containers */
+/* Components */
 import * as entrySiteComponents from './components';
 
 /* Guards */

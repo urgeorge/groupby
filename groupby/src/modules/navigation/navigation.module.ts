@@ -8,9 +8,6 @@ import { RouterModule } from '@angular/router';
 /* Components */
 import * as navigationComponents from './components';
 
-/* Containers */
-import * as navigationContainers from './containers';
-
 /* Layouts */
 import * as appCommonLayouts from './layouts';
 
@@ -24,12 +21,10 @@ import * as navigationServices from './services';
 @NgModule({
   imports: [CommonModule, RouterModule],
     declarations: [
-        ...navigationContainers.containers,
         ...navigationComponents.components,
         ...appCommonLayouts.layouts,
     ],
     exports: [
-        ...navigationContainers.containers,
         ...navigationComponents.components,
         ...appCommonLayouts.layouts,
     ],

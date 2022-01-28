@@ -2,15 +2,22 @@ import { TestBed } from '@angular/core/testing';
 
 import { NavigationGuard } from './navigation.guard';
 
-describe('NavigationGuard', () => {
-  let guard: NavigationGuard;
+describe('Navigation Guards', () => {
+    let navigationGuard: NavigationGuard;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    guard = TestBed.inject(NavigationGuard);
-  });
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [],
+            providers: [NavigationGuard],
+        });
+        navigationGuard = TestBed.inject(NavigationGuard);
+    });
 
-  it('should be created', () => {
-    expect(guard).toBeTruthy();
-  });
+    describe('canActivate', () => {
+        it('should return an Observable<boolean>', () => {
+            navigationGuard.canActivate().subscribe(response => {
+                expect(response).toEqual(true);
+            });
+        });
+    });
 });

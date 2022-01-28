@@ -287,16 +287,6 @@ button.ghost {
 }
 /*-------------------------------*/
 
-.navbar-light .navbar-brand {
-  color: #000;
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-left: 50px;
-  margin-top: 25px;
-}
-
 sb-footer {
   position: fixed;
   left: 0;

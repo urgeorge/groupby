@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 /* Module */
 import {HomeModule} from "./home.module";
 
-/* Containers */
+/* Components */
 import * as homeComponents from './components';
 
 /* Guards */
