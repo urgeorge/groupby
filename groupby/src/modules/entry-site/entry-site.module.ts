@@ -21,6 +21,7 @@ import {CommonModule} from "@angular/common";
     ReactiveFormsModule,
     NavigationModule,
     FontAwesomeModule,
+    FormsModule,
   ],
     providers: [...entrySiteServices.services, ...entrySiteGuards.guards],
     declarations: [...entrySiteComponents.components],

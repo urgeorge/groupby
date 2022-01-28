@@ -13,6 +13,7 @@ import {faCalendarAlt} from "@fortawesome/free-solid-svg-icons";
 import {faVenusMars} from "@fortawesome/free-solid-svg-icons";
 import {AuthService} from "../../../auth/services";
 import {TokenStorageService} from "../../../auth/services/token-storage.service";
+import {Router} from "@angular/router";
 
 const container = document.getElementById('container');
 
@@ -23,6 +24,8 @@ const container = document.getElementById('container');
     styleUrls: ['entry.component.css'],
 })
 export class EntryComponent implements OnInit {
+
+  router: Router;
 
   formLogin: any = {
     username: null,
@@ -40,14 +43,16 @@ export class EntryComponent implements OnInit {
     errorMessage = '';
     roles: string[] = [];
 
-    constructor(private authService: AuthService, private tokenStorage: TokenStorageService) {
-
+    constructor(private authService: AuthService, private tokenStorage: TokenStorageService, router: Router) {
+      this.router = router;
     }
     ngOnInit(): void {
-      if (this.tokenStorage.getToken()) {
-        this.isLoggedIn = true;
-        this.roles = this.tokenStorage.getUser().roles;
-      }
+        if (this.tokenStorage.getToken()) {
+          this.isLoggedIn = true;
+          this.roles = this.tokenStorage.getUser().roles;
+          this.router.navigateByUrl("home");
+        }
+
     }
 
     goLeft(){
@@ -70,7 +75,7 @@ export class EntryComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
-        this.reloadPage();
+        this.RedirectToHomeComponent();
       },
       error: err => {
         this.errorMessage = err.error.message;
@@ -79,8 +84,8 @@ export class EntryComponent implements OnInit {
     });
   }
 
-  reloadPage(): void {
-    window.location.reload();
+  RedirectToHomeComponent(): void {
+    this.router.navigateByUrl("home");
   }
 
 }

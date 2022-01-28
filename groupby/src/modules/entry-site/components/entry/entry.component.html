@@ -51,7 +51,10 @@
     </form>
   </div>
   <div class="form-container sign-in-container">
-    <form>
+    <form *ngIf="!isLoggedIn"
+          name="formLogin"
+          (ngSubmit)="onSubmit()"
+          novalidate>
 
       <div class="forms">
         <div class="form-content">
@@ -60,11 +63,11 @@
             <div class="input-boxes">
               <div class="input-box">
                 <fa-icon [icon]="faUsername"></fa-icon>
-                <input type="text" placeholder="Username" required>
+                <input type="text" placeholder="Username" [(ngModel)]="formLogin.username" name="username"required>
               </div>
               <div class="input-box">
                 <fa-icon [icon]="faPassword"></fa-icon>
-                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Password" [(ngModel)]="formLogin.password" name="password" required>
               </div>
               <div class="text"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
