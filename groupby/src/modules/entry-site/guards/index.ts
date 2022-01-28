@@ -1,5 +1,5 @@
-import { PostGuard } from './entry-site.guard';
+import { EntrySiteGuard } from './entry-site.guard';
 
-export const guards = [PostGuard];
+export const guards = [EntrySiteGuard];
 
 export * from './entry-site.guard';

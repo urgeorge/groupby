@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { EntrySiteModule } from './entry-site.module';
 
 /* Containers */
-import * as entrySiteContainers from './containers';
+import * as entrySiteComponents from './components';
 
 /* Guards */
 import * as entrySiteGuards from './guards';
@@ -15,11 +15,7 @@ import * as entrySiteGuards from './guards';
 export const ROUTES: Routes = [
     {
         path: '',
-        component: entrySiteContainers.HomeComponent,
-    },
-    {
-        path: 'about',
-        component: entrySiteContainers.AboutComponent,
+        component: entrySiteComponents.EntryComponent,
     },
 ];
 

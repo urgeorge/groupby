@@ -1,5 +1,5 @@
-import { AuthBoxComponent } from './auth-box/auth-box.component';
+import { EntryComponent } from './entry/entry.component';
 
-export const components = [AuthBoxComponent];
+export const components = [EntryComponent];
 
-export * from './auth-box/auth-box.component';
+export * from './entry/entry.component';

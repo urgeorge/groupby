@@ -1,23 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PostGuard } from './entry-site.guard';
+import { EntrySiteGuard } from './entry-site.guard';
 
-describe('Error Guards', () => {
-  let postGuard: PostGuard;
+describe('EntrySiteGuard', () => {
+  let guard: EntrySiteGuard;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [],
-      providers: [PostGuard],
-    });
-    postGuard = TestBed.inject(PostGuard);
+    TestBed.configureTestingModule({});
+    guard = TestBed.inject(EntrySiteGuard);
   });
 
-  describe('canActivate', () => {
-    it('should return an Observable<boolean>', () => {
-      postGuard.canActivate().subscribe(response => {
-        expect(response).toEqual(true);
-      });
-    });
+  it('should be created', () => {
+    expect(guard).toBeTruthy();
   });
 });
