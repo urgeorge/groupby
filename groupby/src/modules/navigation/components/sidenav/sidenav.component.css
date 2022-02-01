@@ -112,6 +112,7 @@
   transition: all 0.5s ease;
   background: var(--second-sidenav-color);
 }
+
 .sidebar.open input{
   padding: 0 20px 0 50px;
   width: 100%;
