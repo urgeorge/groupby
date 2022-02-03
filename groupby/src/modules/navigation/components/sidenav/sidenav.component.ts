@@ -23,4 +23,5 @@ export class SidenavComponent implements OnInit {
   this.tokenStorageService.signOut();
   this.router.navigateByUrl("/")
   }
+
 }
