@@ -237,90 +237,19 @@
   transition: all 0.5s ease;
   z-index: 2;
 }
+@media (min-width: 993px) {
 .sidebar.open ~ .home-section{
   left: 250px;
   width: calc(100% - 250px);
 }
-.home-section .text{
-  color: var(--sidenav-color);
-  font-size: 25px;
-  font-weight: 500;
-  margin-left: 36px;
-  margin-top: 16px;
-  margin-bottom: 16px;
 }
-
-
-/*----------------------------------------*/
-
-
-.wrapper-grid {
-  display: grid;
-  margin-left: 16px;
-  margin-right: 16px;
-  grid-template-columns: repeat(auto-fit, 12rem);
-  column-gap: 1rem;
-  justify-content: left;
-}
-
-.container {
-  overflow: hidden;
-  background-color: white;
-  text-align: center;
-  border-radius: 1rem;
-  position: relative;
-  margin: 0.5rem;
-  border:.1rem solid rgba(87,75,144,.1);
-  box-shadow: .5rem .5rem 1rem rgba(0,0,0,.2);
-  transition: all ease-in-out 0.2s;
-}
-.container:hover {
-  border-color: #fff;
-  box-shadow: 0px 5px 20px 5px rgba(110, 123, 131, 0.5);
-  transform: scale(1.05);
-  cursor: pointer;
-}
-.profile-img {
-  width: 6rem;
-  clip-path: circle(48px at center);
-}
-
-.group-name {
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 8px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-
-
-/* To another site (to join to some group) */
-.description {
-  margin-left: 4px;
-  margin-right: 4px;
-  font-size: 12px;
-}
-
-.container .btn {
-  width: 100%;
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  padding: 1rem;
-  background-color: #651fff;
-}
-
-/*----------------------------------------*/
-
 
 @media (max-width: 420px) {
   .sidebar li .tooltip{
     display: none;
   }
+
 }
+
+
 
