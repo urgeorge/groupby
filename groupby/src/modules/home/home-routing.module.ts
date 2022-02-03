@@ -18,6 +18,10 @@ export const ROUTES: Routes = [
         path: '',
         component: homeComponents.HomeComponent,
     },
+    {
+    path: 'find',
+    component: homeComponents.FindNewGroupComponent,
+    },
 ];
 
 @NgModule({
