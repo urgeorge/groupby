@@ -34,9 +34,5 @@ public class TestController {
     public String adminAccess() {
         return "Admin Board.";
     }
-    @GetMapping("/swagger")
-    public Boolean swaggerInicjalization() {
-        return true;
-    }
 
 }

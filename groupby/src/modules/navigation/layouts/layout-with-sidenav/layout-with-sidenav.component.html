@@ -1,0 +1,78 @@
+
+<div class="sidebar">
+  <div class="logo-details">
+
+    <div class="logo_name">GroupBy</div>
+    <i class='bx bx-menu' id="btn" (click)="toggleSideBar()" ></i>
+  </div>
+  <ul class="nav-list">
+    <li>
+      <i class='bx bx-search' (click)="toggleSideBar()"></i>
+      <input type="text" placeholder="Search...">
+      <span class="tooltip">Browse your groups</span>
+    </li>
+    <li>
+      <a href="/home">
+        <i class='bx bx-home'></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+      <span class="tooltip">Dashboard</span>
+    </li>
+    <li>
+      <a href="/home/find">
+        <i class='bx bx-category-alt' ></i>
+        <span class="links_name">Find new groups</span>
+      </a>
+      <span class="tooltip">Find new groups</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-user' ></i>
+        <span class="links_name">Profile</span>
+      </a>
+      <span class="tooltip">Profile</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-chat' ></i>
+        <span class="links_name">Messages</span>
+      </a>
+      <span class="tooltip">Messages</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-bell' ></i>
+        <span class="links_name">Notifications</span>
+      </a>
+      <span class="tooltip">Notifications</span>
+    </li>
+
+
+    <li>
+      <a href="#">
+        <i class='bx bx-cog' ></i>
+        <span class="links_name">Settings</span>
+      </a>
+      <span class="tooltip">Settings</span>
+    </li>
+
+
+    <li class="profile">
+      <div class="profile-details">
+        <img src="/assets/img/error-404-monochrome.svg" alt="profileImg">
+        <div class="name_job">
+          <div class="name">user1234</div>
+          <div class="job">John Doe</div>
+        </div>
+      </div>
+      <i class='bx bx-log-out' id="log_out" (click)="logout()"></i>
+      <span class="tooltip">Logout</span>
+    </li>
+  </ul>
+</div>
+<section class="home-section">
+
+  <ng-content></ng-content>
+</section>
+
+<sb-footer></sb-footer>
