@@ -1,7 +1,7 @@
 package com.groupby.groupbybackend.controllers;
 
 
-import com.groupby.groupbybackend.models.Group;
+import com.groupby.groupbybackend.models.AppGroup;
 import com.groupby.groupbybackend.services.GroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +22,7 @@ public class GroupController {
     }
 
     @GetMapping("/all")
-    public List<Group> findAllGroups() {
+    public List<AppGroup> findAllGroups() {
         return groupService.findAll();
     }
 }

@@ -1,27 +1,34 @@
 package com.groupby.groupbybackend.models;
 
-import org.hibernate.validator.constraints.UniqueElements;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
-@Table(name = "groups")
+@Table(name = "app_groups")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
-public class Group {
+public class AppGroup {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, length = 30)
+    @Column(unique = true)
     @NotBlank
-    @Size(max = 30)
+    @Size(max = 40)
     private String name;
 
-    @Size(max = 5000)
+    @Size(max = 2000)
     private String description;
 
     @Size(max = 250)
@@ -36,14 +43,9 @@ public class Group {
     @NotBlank
     private boolean isPrivate;
 
-    @Lob
     private String settings;
 
     @NotBlank
     private Date createdAt;
-
-    @NotBlank
-    private Date updatedAt;
-
 
 }

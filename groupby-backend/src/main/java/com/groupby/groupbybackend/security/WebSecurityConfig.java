@@ -18,6 +18,11 @@ import com.groupby.groupbybackend.security.jwt.AuthEntryPointJwt;
 import com.groupby.groupbybackend.security.jwt.AuthTokenFilter;
 import com.groupby.groupbybackend.security.services.UserDetailsServiceImpl;
 import org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
+
+import java.util.Arrays;
 
 @Configuration
 @EnableWebSecurity
@@ -27,13 +32,6 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationEn
         prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private static final String[] AUTH_LIST = {
-            // -- swagger ui
-            "**/swagger-resources/**",
-            "/swagger-ui/index.html",
-            "/v2/api-docs",
-            "/webjars/**"
-    };
 
     @Autowired
     UserDetailsServiceImpl userDetailsService;
@@ -62,6 +60,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    public CorsFilter corsFilter() {
+        final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        final CorsConfiguration config = new CorsConfiguration();
+        config.setAllowCredentials(true);
+
+        config.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
+        config.setAllowedHeaders(Arrays.asList("Origin", "Content-Type", "Accept", "Authorization"));
+        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH"));
+        source.registerCorsConfiguration("/**", config);
+        return new CorsFilter(source);
+    }
+
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -71,6 +82,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/api/auth/**").permitAll()
                 .antMatchers("/api/test/**").permitAll()
+                .antMatchers("/api/groups/**").permitAll()
                 .anyRequest().authenticated();
                 //.anyRequest().permitAll();
 

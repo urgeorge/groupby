@@ -1,0 +1,24 @@
+
+CREATE TABLE IF NOT EXISTS roles (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(20) DEFAULT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(40) NOT NULL,
+    username VARCHAR(20) DEFAULT NULL,
+    password VARCHAR(256) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE IF NOT EXISTS user_roles (
+    user_id INT NOT NULL,
+    role_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users (id),
+    FOREIGN KEY (role_id) REFERENCES roles (id)
+    ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+INSERT INTO roles VALUES
+                     (1, "ROLE_USER"),
+                     (2, "ROLE_MODERATOR"),
+                     (3, "ROLE_ADMIN");
