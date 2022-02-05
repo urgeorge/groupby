@@ -10,15 +10,15 @@ import {Group} from "../../models";
 export class FindNewGroupComponent implements OnInit {
 
   groupService: GroupService;
-  group: Group | undefined;
+
+  groups: Group[] = [];
 
   constructor(groupService: GroupService) {
     this.groupService= groupService;
   }
 
   ngOnInit(): void {
-    let groups = this.groupService.getAllGroups().subscribe(groups => this.group = groups[0]);
-
+    this.groupService.getAllGroups().subscribe(groups => this.groups = groups);
 
   }
 
