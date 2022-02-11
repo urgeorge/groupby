@@ -6,11 +6,13 @@
     <i class='bx bx-menu' id="btn" (click)="toggleSideBar()" ></i>
   </div>
   <ul class="nav-list">
+
     <li>
       <i class='bx bx-search' (click)="toggleSideBar()"></i>
       <input type="text" placeholder="Search...">
       <span class="tooltip">Browse your groups</span>
     </li>
+
     <li>
       <a href="/home">
         <i class='bx bx-home'></i>
@@ -18,12 +20,20 @@
       </a>
       <span class="tooltip">Dashboard</span>
     </li>
+
     <li>
       <a href="/home/find">
         <i class='bx bx-category-alt' ></i>
         <span class="links_name">Find new groups</span>
       </a>
       <span class="tooltip">Find new groups</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bxs-plus-square'></i>
+        <span class="links_name">Create group</span>
+      </a>
+      <span class="tooltip">Create group</span>
     </li>
     <li>
       <a href="#">
