@@ -1,0 +1,126 @@
+
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+
+form {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: left;
+
+  transform: translateY(20%);
+}
+
+
+.group-form .form-content .input-boxes{
+  margin-top: 30px;
+}
+
+.group-form .form-content .input-box{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.form-content .input-box select{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid{
+  border-color: var(--main-color);
+}
+.form-content .input-box i{
+  position: absolute;
+  color: var(--main-color);
+  font-size: 17px;
+}
+
+.form-content .input-box fa-icon{
+  position: absolute;
+  color: var(--main-color);
+  font-size: 17px;
+}
+
+.group-form .form-content .text{
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.group-form .form-content .text a{
+  text-decoration: none;
+}
+.group-form .form-content .text a:hover{
+  text-decoration: underline;
+}
+.group-form .form-content .button{
+  color: #fff;
+  margin-top: 40px;
+}
+
+.group-form .form-content .button input{
+  color: #fff;
+  background: var(--main-color);
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.group-form .form-content .button input:hover{
+  background: #FB9689;
+}
+.group-form .form-content .button input:active{
+  transform: scale(0.95);
+}
+.group-form .form-content label{
+  color: #FB9689;
+  cursor: pointer;
+}
+.group-form .form-content label:hover{
+  text-decoration: underline;
+}
+.group-form .form-content .login-text,
+.group-form .form-content .sign-up-text{
+  text-align: center;
+  margin-top: 25px;
+}
+
+
+sb-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}

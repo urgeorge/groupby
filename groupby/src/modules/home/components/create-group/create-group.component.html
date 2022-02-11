@@ -1,5 +1,45 @@
 <layout-with-sidenav>
 
+  <form>
+    <div class="group-form">
+      <div class="form-content">
+          <h1>Create your Group</h1>
+          <div class="input-boxes">
+            <div class="input-box">
+              <fa-icon [icon]="faUsername"></fa-icon>
+              <input type="text" placeholder="Enter group name" style="margin-right: 15px" required>
+            </div>
+            <div class="input-box">
+              <fa-icon [icon]="faUsername"></fa-icon>
+              <input type="text" placeholder="Enter description" required>
+            </div>
+            <div class="input-box">
+              <fa-icon [icon]="faMail"></fa-icon>
+              <input type="email" placeholder="Enter short description" required>
+            </div>
+            <div class="input-box">
+              <fa-icon [icon]="faPassword"></fa-icon>
+              <input type="password" placeholder="Enter your image url" required>
+            </div>
+            <div class="input-box">
+              <fa-icon [icon]="faPassword"></fa-icon>
+              <input type="password" placeholder="Enter website url" required>
+            </div>
+            <div class="input-box">
+              <fa-icon [icon]="faGender"></fa-icon>
+              <select id="gender-select">
+                <option value="nothing">Type of group</option>
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+              </select>
 
+            </div>
+            <div class="button input-box">
+              <input type="submit" value="Create group">
+            </div>
+          </div>
+        </div>
+      </div>
+  </form>
 
 </layout-with-sidenav>
