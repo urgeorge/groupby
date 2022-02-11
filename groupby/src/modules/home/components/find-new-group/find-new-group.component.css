@@ -3,19 +3,15 @@
   color: var(--sidenav-color);
   font-size: 25px;
   font-weight: 500;
-  margin-left: 36px;
-  margin-top: 16px;
+  margin-left: 20px;
   margin-bottom: 16px;
 }
 
 .wrapper-grid {
   display: grid;
-  margin-left: 16px;
-  margin-right: 16px;
   grid-template-columns: repeat(auto-fit, 12rem);
   column-gap: 1rem;
   justify-content: left;
-  margin-bottom: 16px;
 }
 
 .container {
