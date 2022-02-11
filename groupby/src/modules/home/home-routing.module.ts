@@ -22,6 +22,10 @@ export const ROUTES: Routes = [
     path: 'find',
     component: homeComponents.FindNewGroupComponent,
     },
+  {
+    path: 'create-group',
+    component: homeComponents.CreateGroupComponent,
+  },
 ];
 
 @NgModule({
